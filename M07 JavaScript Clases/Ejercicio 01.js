@@ -1,7 +1,7 @@
 /*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
 /*1️⃣ EJERCICIO 01 1️⃣*/
 
-function crearUsuario() {
+function crearUsuario() {  
    // Crea una Clase de ES6 o una función constructora llamada "Usuario".
    // El constructor de esta clase debe tener las propiedades: "usuario", "nombre", "email" y "password".
    // El valor de cada propiedad la recibirá por parámetro.
@@ -12,16 +12,16 @@ function crearUsuario() {
    // Tu código:
 
    class Usuario {
-      constructor (usuario, nombre, email, password) {
-         this.usuario = usuario;
-         this.nombre = nombre;
-         this.email = email;
-         this.password = password;
-         this.saludar = function() {
-            return 'Hola, mi nombre es ' + this.nombre;
-         }
+      constructor(usuario, nombre, email, password) {
+      this.usuario = usuario;
+      this.nombre = nombre;
+      this.email = email;
+      this.password = password;
+      this.saludar = function () {
+         return 'Hola, mi nombre es ' + this.nombre
       }
    }
+}
    return Usuario;
 }
 
@@ -31,8 +31,8 @@ function agregarMetodoPrototype(Usuario) {
    // Tu código:
 
    Usuario.prototype.saludar = function (){
-      return "Hello World!"
-   };
+      return 'Hello World!'
+   }
 }
 
 function agregarStringInvertida() {
@@ -40,12 +40,20 @@ function agregarStringInvertida() {
    // El método debe llamarse "reverse".
    // [PISTA]: necesitarás utilizar el objeto "this".
 
-   String.prototype.reverse = function() {
-      let wSepared = this.split('');
-      let wInverted = wSepared.reverse();
-      let nWord = wInverted.join('');
-      return nWord;
-   };
+   String.prototype.reverse = function(){
+
+   // ESTA OPCION ES MUCHO MAS ABREVIADA PERO UN POCO MAS COMPLEJA SI ES QUE NO SE TIENE YA UN POCO DE PRACTICA. 
+      
+      // return this.split('').reverse().join('');  
+
+      let palabraSeparada = this.split('')
+      let palabraInvertida = palabraSeparada.reverse()
+      let nuevaPalabra = palabraInvertida.join('')
+      
+      return nuevaPalabra;
+
+   }
+
 }
 
 
